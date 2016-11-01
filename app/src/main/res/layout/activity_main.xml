@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.iezview.tourdemo.activity.MainActivity"
-    android:background="@drawable/main_acty_bg">
+    tools:context="com.iezview.tour.activity.MainActivity"
+    android:background="@drawable/main_actiy_bg">
 
     <TextView
         android:id="@+id/text1"
