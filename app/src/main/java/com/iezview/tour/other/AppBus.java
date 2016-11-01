@@ -7,5 +7,16 @@ import com.squareup.otto.Bus;
  */
 
 public class AppBus extends Bus {
-///
+    private volatile static AppBus instance;
+
+    public static AppBus getInstance() {
+        if(instance==null){
+            synchronized (AppBus.class){
+                if(instance==null){
+                    instance=new AppBus();
+                }
+            }
+        }
+        return instance;
+    }
 }
