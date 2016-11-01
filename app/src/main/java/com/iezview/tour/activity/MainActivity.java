@@ -42,8 +42,8 @@ public class MainActivity extends BaseActivity {
             type =
                     View.OnClickListener.class
     )
-    private void OnClick_X(View view) {
-        switch (view.getId()) {
+    private void OnClick_X(View v) {
+        switch (v.getId()) {
             case R.id.text1:
                 startActivity(new Intent(this, LeaveActivity.class));
                 break;
