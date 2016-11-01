@@ -7,5 +7,5 @@ import com.squareup.otto.Bus;
  */
 
 public class AppBus extends Bus {
-
+///
 }
