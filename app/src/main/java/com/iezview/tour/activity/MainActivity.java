@@ -45,10 +45,10 @@ public class MainActivity extends BaseActivity {
     private void OnClick_X(View v) {
         switch (v.getId()) {
             case R.id.text1:
-                startActivity(new Intent(this, LeaveActivity.class));
+                startActivity(new Intent(this, ItemListActivity.class));
                 break;
             case R.id.text2:
-                startActivity(new Intent(this, InitGoActivity.class));
+                startActivity(new Intent(this, LeaveActivity.class));
                 break;
             case R.id.text3:
                 startActivity(new Intent(this, OnWayActivity.class));
