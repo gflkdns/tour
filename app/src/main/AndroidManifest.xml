@@ -42,6 +42,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.iezview.tour.activity.ItemListActivity"/>
         </activity>
+        <activity android:name="com.iezview.tour.activity.ModelActivity">
+        </activity>
     </application>
 
 </manifest>
