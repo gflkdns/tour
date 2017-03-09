@@ -1,18 +1,17 @@
 package com.iezview.tour.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.iezview.tourdemo.R;
+import com.tour.ydt.R;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 
 @ContentView(R.layout.activity_model)
-public class ModelActivity extends BaseActivity {
+public class ModelActivity extends AbActivity {
 
     @ViewInject(R.id.activity_model)
     RelativeLayout activity_model;

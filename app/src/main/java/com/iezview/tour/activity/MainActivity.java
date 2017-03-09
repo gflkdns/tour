@@ -4,19 +4,18 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.iezview.tourdemo.R;
+import com.tour.ydt.R;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 
 @ContentView(R.layout.activity_main)
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AbActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,9 +35,12 @@ public class MainActivity extends BaseActivity {
 
     @Event(
             value = {
-                    R.id.text1,
+                    R.id.text1,//四个按钮
                     R.id.text2,
-                    R.id.text3,},
+                    R.id.text3,
+                    R.id.text4,
+                    R.id.imageView,//登录按钮
+            },
             type =
                     View.OnClickListener.class
     )
@@ -52,6 +54,12 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.text3:
                 startActivity(new Intent(this, OnWayActivity.class));
+                break;
+            case R.id.text4://报名须知
+                startActivity(new Intent(this, HelperActy.class));
+                break;
+            case R.id.imageView:
+                startActivity(new Intent(this, LoginActivity.class));
                 break;
         }
     }

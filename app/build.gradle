@@ -3,8 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.3"
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
-        applicationId "com.iezview.tourdemo"
+        applicationId "com.tour.ydt"
         minSdkVersion 21
         targetSdkVersion 24
         versionCode 1
@@ -29,6 +30,8 @@ dependencies {
     compile 'com.android.support:design:24.1.1'
     compile 'com.android.support:support-v4:24.1.1'
     compile 'com.android.support:recyclerview-v7:24.1.1'
-    compile 'com.github.MiQt:AutoTakePic:eede92a542'
     testCompile 'junit:junit:4.12'
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    //3.5.0：请务必查看下面注释[1]
+    compile 'cn.bmob.android:bmob-sdk:3.5.0'
 }

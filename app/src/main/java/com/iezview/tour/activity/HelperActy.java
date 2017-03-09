@@ -1,17 +1,15 @@
 package com.iezview.tour.activity;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.tour.ydt.R;
 
-/**
- * 在路上页面
- */
-public class OnWayActivity extends AbActivity {
+public class HelperActy extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_on_way);
+        setContentView(R.layout.activity_helper_acty);
     }
 }

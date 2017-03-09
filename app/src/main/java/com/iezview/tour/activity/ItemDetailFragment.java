@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.iezview.tourdemo.R;
+import com.tour.ydt.R;
 import com.iezview.tour.activity.dummy.DummyContent;
 
 import org.xutils.common.Callback;

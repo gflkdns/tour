@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.iezview.tourdemo.R;
+import com.tour.ydt.R;
 
 /**
  * An activity representing a single Item detail screen. This

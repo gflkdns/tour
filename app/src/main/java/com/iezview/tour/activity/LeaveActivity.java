@@ -3,7 +3,7 @@ package com.iezview.tour.activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.iezview.tourdemo.R;
+import com.tour.ydt.R;
 
 /**
  * 离开景点页面

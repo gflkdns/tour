@@ -3,13 +3,12 @@ package com.iezview.tour.activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.iezview.tourdemo.R;
+import com.tour.ydt.R;
 
-public class InitGoActivity extends BaseActivity {
+public class InitGoActivity extends AbActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
