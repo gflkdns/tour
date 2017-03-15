@@ -26,7 +26,7 @@
 
         </activity>
         <activity android:name="com.iezview.tour.activity.OnWayActivity" />
-        <activity android:name="com.iezview.tour.activity.LeaveActivity" />
+        <activity android:name="com.iezview.tour.activity.CoachListActivity" />
         <activity android:name="com.iezview.tour.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

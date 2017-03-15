@@ -3,16 +3,16 @@ package com.iezview.tour.entity;
 import cn.bmob.v3.BmobObject;
 
 /**
- * 陪练
+ * Created by Administrator on 2017/3/15.
+ * 学校
  */
 
-public class Sparring extends BmobObject {
+public class School extends BmobObject {
     private String id;
     private String name;
-    private String sex;
-    private String age;
+    private String location;
+    private String tuition;
     private String desc;
-    private String image;
 
     public String getId() {
         return id;
@@ -30,20 +30,20 @@ public class Sparring extends BmobObject {
         this.name = name;
     }
 
-    public String getSex() {
-        return sex;
+    public String getLocation() {
+        return location;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public String getAge() {
-        return age;
+    public String getTuition() {
+        return tuition;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+    public void setTuition(String tuition) {
+        this.tuition = tuition;
     }
 
     public String getDesc() {
@@ -52,13 +52,5 @@ public class Sparring extends BmobObject {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 }

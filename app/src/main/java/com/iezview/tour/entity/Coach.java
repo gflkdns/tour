@@ -3,15 +3,23 @@ package com.iezview.tour.entity;
 import cn.bmob.v3.BmobObject;
 
 /**
- *教练
+ * 教练
  */
 
 public class Coach extends BmobObject {
+    private String id;
     String name;
     String sex;
     String age;
-    String schoolId;
     String introduce;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -37,13 +45,7 @@ public class Coach extends BmobObject {
         this.age = age;
     }
 
-    public String getSchoolId() {
-        return schoolId;
-    }
 
-    public void setSchoolId(String schoolId) {
-        this.schoolId = schoolId;
-    }
 
     public String getIntroduce() {
         return introduce;

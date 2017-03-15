@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.iezview.tour.entity.Student;
 import com.tour.ydt.R;
 
 import org.xutils.view.annotation.Event;
@@ -54,13 +55,13 @@ public class RegActivity extends AbActivity {
             return;
         }
         //注册用户
-        BmobUser bu = new BmobUser();
+        Student bu = new Student();
         bu.setUsername(username);
         bu.setPassword(pass);
         //注意：不能用save方法进行注册
-        bu.signUp(new SaveListener<BmobUser>() {
+        bu.signUp(new SaveListener<Student>() {
             @Override
-            public void done(BmobUser s, BmobException e) {
+            public void done(Student s, BmobException e) {
                 if (e == null) {
                     Toast.makeText(RegActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
                     //通过BmobUser.getCurrentUser(context)方法获取登录成功后的本地用户信息

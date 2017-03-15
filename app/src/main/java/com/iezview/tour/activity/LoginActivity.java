@@ -36,6 +36,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.iezview.tour.entity.Student;
 import com.tour.ydt.R;
 
 import org.xutils.view.annotation.Event;
@@ -78,12 +79,12 @@ public class LoginActivity extends AbActivity {
             Toast.makeText(LoginActivity.this, "用户或密码为空", Toast.LENGTH_SHORT).show();
             return;
         }
-        BmobUser bu2 = new BmobUser();
+        Student bu2 = new Student();
         bu2.setUsername(user);
         bu2.setPassword(pass);
-        bu2.login(new SaveListener<BmobUser>() {
+        bu2.login(new SaveListener<Student>() {
             @Override
-            public void done(BmobUser bmobUser, BmobException e) {
+            public void done(Student bmobUser, BmobException e) {
                 if (e != null) {
                     Toast.makeText(LoginActivity.this, "登录失败," + e.getMessage(), Toast.LENGTH_SHORT).show();
                     return;
