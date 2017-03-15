@@ -3,7 +3,7 @@ package com.iezview.tour.entity;
 import cn.bmob.v3.BmobObject;
 
 /**
- * Created by Administrator on 2017/3/7.
+ *教练
  */
 
 public class Coach extends BmobObject {

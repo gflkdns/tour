@@ -14,8 +14,12 @@ import com.tour.ydt.R;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 
+import cn.bmob.v3.BmobUser;
+
 @ContentView(R.layout.activity_main)
 public class MainActivity extends AbActivity {
+
+    private BmobUser mUser;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +35,7 @@ public class MainActivity extends AbActivity {
             window.setStatusBarColor(Color.TRANSPARENT);
             window.setNavigationBarColor(Color.TRANSPARENT);
         }
+
     }
 
     @Event(
@@ -39,27 +44,24 @@ public class MainActivity extends AbActivity {
                     R.id.text2,
                     R.id.text3,
                     R.id.text4,
-                    R.id.imageView,//登录按钮
             },
             type =
                     View.OnClickListener.class
     )
     private void OnClick_X(View v) {
         switch (v.getId()) {
-            case R.id.text1:
-                startActivity(new Intent(this, ItemListActivity.class));
-                break;
-            case R.id.text2:
-                startActivity(new Intent(this, LeaveActivity.class));
-                break;
-            case R.id.text3:
-                startActivity(new Intent(this, OnWayActivity.class));
-                break;
-            case R.id.text4://报名须知
+            case R.id.text1://报考须知
                 startActivity(new Intent(this, HelperActy.class));
                 break;
-            case R.id.imageView:
-                startActivity(new Intent(this, LoginActivity.class));
+            case R.id.text2://找教练
+                startActivity(new Intent(this, LeaveActivity.class));
+                break;
+            case R.id.text3://找学校
+                startActivity(new Intent(this, OnWayActivity.class));
+                break;
+            case R.id.text4://找陪练
+                startActivity(new Intent(this, ItemListActivity.class));
+
                 break;
         }
     }

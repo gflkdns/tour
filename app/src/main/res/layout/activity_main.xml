@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_main"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.iezview.tour.activity.MainActivity"
-    android:background="@drawable/main_actiy_bg">
+    android:background="@drawable/main_actiy_bg"
+    tools:context="com.iezview.tour.activity.MainActivity">
 
     <TextView
         android:id="@+id/text1"
@@ -14,8 +14,7 @@
         android:layout_marginTop="70dp"
         android:background="@android:color/holo_blue_dark"
         android:text="报考须知"
-        android:textAllCaps="false"
-        />
+        android:textAllCaps="false" />
 
     <TextView
         android:id="@+id/text2"
@@ -23,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_below="@id/text1"
         android:background="@color/colorAccent"
-        android:text="找教练"/>
+        android:text="找教练" />
 
     <TextView
         android:id="@+id/text3"
@@ -31,23 +30,15 @@
         android:layout_width="wrap_content"
         android:layout_below="@id/text2"
         android:background="@android:color/holo_green_light"
-        android:text="找学校"
-        />
+        android:text="找学校" />
+
     <TextView
         android:id="@+id/text4"
         style="@style/main_text_stye"
         android:layout_width="wrap_content"
         android:layout_below="@id/text3"
         android:background="@android:color/holo_green_light"
-        android:text="找陪练"
-        />
+        android:text="找陪练" />
 
-    <ImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@mipmap/smaill"
-        android:layout_marginRight="10dp"
-        android:layout_alignTop="@+id/text1"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/imageView" />
+
 </RelativeLayout>

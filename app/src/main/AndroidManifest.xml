@@ -23,15 +23,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.iezview.tour.activity.MainActivity">
+
+        </activity>
+        <activity android:name="com.iezview.tour.activity.OnWayActivity" />
+        <activity android:name="com.iezview.tour.activity.LeaveActivity" />
+        <activity android:name="com.iezview.tour.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.iezview.tour.activity.OnWayActivity" />
-        <activity android:name="com.iezview.tour.activity.LeaveActivity" />
-        <activity android:name="com.iezview.tour.activity.LoginActivity" />
         <activity android:name="com.iezview.tour.activity.RegActivity" />
         <activity
             android:name="com.iezview.tour.activity.InitGoActivity"

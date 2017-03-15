@@ -81,10 +81,13 @@ public class LoginActivity extends AbActivity {
         BmobUser bu2 = new BmobUser();
         bu2.setUsername(user);
         bu2.setPassword(pass);
-        bu2.login(new SaveListener<String>() {
+        bu2.login(new SaveListener<BmobUser>() {
             @Override
-            public void done(String s, BmobException e) {
-
+            public void done(BmobUser bmobUser, BmobException e) {
+                if (e != null) {
+                    Toast.makeText(LoginActivity.this, "登录失败," + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Toast.makeText(LoginActivity.this, "登录成功！", Toast.LENGTH_SHORT).show();
                 //通过BmobUser user = BmobUser.getCurrentUser(context)获取登录成功后的本地用户信息
                 //如果是自定义用户对象MyUser，可通过MyUser user = BmobUser.getCurrentUser(context,MyUser.class)获取自定义用户信息
@@ -92,12 +95,8 @@ public class LoginActivity extends AbActivity {
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
-
-                if (e.getErrorCode() == 101) {
-                    s = "用户名或密码错误！";
-                }
-                Toast.makeText(LoginActivity.this, "登录失败," + s, Toast.LENGTH_SHORT).show();
             }
+
         });
     }
 
