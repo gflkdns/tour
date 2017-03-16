@@ -57,10 +57,10 @@ public class MainActivity extends AbActivity {
                 startActivity(new Intent(this, CoachListActivity.class));
                 break;
             case R.id.text3://找学校
-                startActivity(new Intent(this, OnWayActivity.class));
+                startActivity(new Intent(this, ItemListActivity.class));
                 break;
             case R.id.text4://找陪练
-                startActivity(new Intent(this, ItemListActivity.class));
+
 
                 break;
         }
