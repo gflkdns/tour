@@ -26,7 +26,13 @@ public class DummyContent {
     private static final int COUNT = 25;
 
     static {
-        addItem(new DummyItem(String.valueOf(1), "海淀驾校 - 5000¥", "驾校位于海淀区北部风景旅游景区，属海淀区区属大型企业。创建于1985年，占地3000多亩。在同行业中有着悠久的创业史，是北京市乃至全国最大的机动车驾驶员综合培训及服务基地。", "http://imgsrc.baidu" +
+        addItem(new DummyItem(String.valueOf(1),
+                //驾校名称↓
+                "海淀驾校 - 5000¥",
+                //描述↓
+                "驾校位于海淀区北部风景旅游景区，属海淀区区属大型企业。创建于1985年，占地3000多亩。在同行业中有着悠久的创业史，是北京市乃至全国最大的机动车驾驶员综合培训及服务基地。",
+                //图片↓
+                "http://imgsrc.baidu" +
                 ".com/forum/w%3D580/sign=8d2725bbb219ebc4c0787691b227cf79" +
                 "/d1f9b31bb051f819720e1994dbb44aed2f73e735.jpg"));
         addItem(new DummyItem(String.valueOf(2), "东方时尚驾校 - 5000¥", "世界上有一个最大最长的珊瑚礁群 " +
