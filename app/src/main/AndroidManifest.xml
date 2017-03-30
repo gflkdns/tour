@@ -22,9 +22,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.iezview.tour.activity.MainActivity">
-
-        </activity>
+        <activity android:name="com.iezview.tour.activity.MainActivity"></activity>
         <activity android:name="com.iezview.tour.activity.OnWayActivity" />
         <activity android:name="com.iezview.tour.activity.CoachListActivity" />
         <activity android:name="com.iezview.tour.activity.LoginActivity">
@@ -53,7 +51,8 @@
                 android:value="com.iezview.tour.activity.ItemListActivity" />
         </activity>
         <activity android:name="com.iezview.tour.activity.ModelActivity" />
-        <activity android:name="com.iezview.tour.activity.HelperActy"></activity>
+        <activity android:name="com.iezview.tour.activity.HelperActy" />
+        <activity android:name="com.iezview.tour.activity.CoachActivity"></activity>
     </application>
 
 </manifest>

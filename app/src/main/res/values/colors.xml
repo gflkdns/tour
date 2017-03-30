@@ -6,4 +6,5 @@
     <color name="main_textcolor1">#bf5098</color>
     <color name="main_bgcolor1">#bf5098</color>
     <color name="withe">#ffffff</color>
+    <color name="black">#000000</color>
 </resources>

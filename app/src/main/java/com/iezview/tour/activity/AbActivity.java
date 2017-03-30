@@ -11,7 +11,9 @@ import org.xutils.x;
 
 import java.util.Random;
 
-
+/**
+ * 所有activity的父类
+ */
 public class AbActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,7 +22,7 @@ public class AbActivity extends AppCompatActivity {
     }
 
     /**
-     * 判断是不是字符串是不是空
+     * 判断字符串是不是空
      *
      * @param str
      * @return 空返回true

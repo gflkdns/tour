@@ -1,5 +1,7 @@
 package com.iezview.tour.entity;
 
+import java.util.List;
+
 import cn.bmob.v3.BmobObject;
 
 /**
@@ -12,6 +14,24 @@ public class Coach extends BmobObject {
     String sex;
     String age;
     String introduce;
+    String icon;
+    List<Comment> comments;
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
 
     public String getId() {
         return id;
@@ -44,7 +64,6 @@ public class Coach extends BmobObject {
     public void setAge(String age) {
         this.age = age;
     }
-
 
 
     public String getIntroduce() {

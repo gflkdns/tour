@@ -10,8 +10,8 @@ import cn.bmob.v3.BmobUser;
 public class Student extends BmobUser {
     private String id;//学生id
     private String schoolId;//学校id
-    private String coachId;
-    private String sparringId;
+    private String coachId;//教練id
+    private String sparringId;//陪练id
 
     public String getId() {
         return id;
