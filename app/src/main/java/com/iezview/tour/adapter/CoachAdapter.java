@@ -20,6 +20,7 @@ import com.iezview.tour.activity.CoachListActivity;
 import com.iezview.tour.activity.ItemListActivity;
 import com.iezview.tour.entity.Coach;
 import com.iezview.tour.entity.Comment;
+import com.iezview.tour.entity.Favour;
 import com.iezview.tour.entity.Student;
 import com.tour.ydt.R;
 
@@ -91,6 +92,7 @@ public class CoachAdapter extends BaseAdapter {
         viewHoulder.tv_comment.setOnClickListener(new InnerListener(position));
         viewHoulder.tv_signup.setOnClickListener(new InnerListener(position));
         ImageOptions.Builder bd = new ImageOptions.Builder();
+        //加载图片失败的时候显示这个
         bd.setFailureDrawableId(R.mipmap.ic_launcher);
         bd.setFadeIn(true);
         x.image().bind(viewHoulder.iv_icon, coach.getIcon(), bd.build());
@@ -101,6 +103,11 @@ public class CoachAdapter extends BaseAdapter {
                 view.setText(comment.getContext());
                 viewHoulder.ll_comments.addView(view);
             }
+        }
+        if(coach.getFavour() != null && coach.getFavour().size() > 0){
+            viewHoulder.tv_likelist.setText(coach.getFavour().toString()+"觉得很赞！");
+        }else{
+            viewHoulder.tv_likelist.setText("");
         }
         return convertView;
     }
@@ -122,6 +129,8 @@ public class CoachAdapter extends BaseAdapter {
         TextView tv_comment;
         @ViewInject(R.id.tv_signup)
         TextView tv_signup;
+        @ViewInject(R.id.tv_likelist)
+        TextView tv_likelist;
         @ViewInject(R.id.ll_comments)
         LinearLayout ll_comments;
 
@@ -141,13 +150,25 @@ public class CoachAdapter extends BaseAdapter {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.tv_like:
-
+                    if (coaches.get(index).getFavour() == null) {
+                        coaches.get(index).setFavour(new ArrayList<Favour>());
+                    }
+                    List<Favour> favours = coaches.get(index).getFavour();
+                    Favour favour = new Favour();
+                    favour.setName(BmobUser.getCurrentUser().getUsername());
+                    if (favours.contains(favour)) {
+                        favours.remove(favour);
+                    } else {
+                        favours.add(favour);
+                    }
+                    coaches.get(index).update();
+                    notifyDataSetChanged();
                     break;
                 case R.id.tv_comment:
                     comment();
                     break;
                 case R.id.tv_signup:
-                    if (TextUtils.isEmpty(BmobUser.getCurrentUser(Student.class).getSchoolId()))
+                    if (TextUtils.isEmpty(BmobUser.getCurrentUser(Student.class).getCoachId()))
                         signUp();
                     else
                         Toast.makeText(context, "你已经报名过了！", Toast.LENGTH_SHORT).show();

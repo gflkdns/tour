@@ -77,17 +77,28 @@
             android:text="报名" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_likelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:textColor="@color/black"></TextView>
+
     <LinearLayout
         android:id="@+id/ll_comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
         android:orientation="vertical">
-        <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="那眼光在瞬间仿佛穿过了光阴，忘却
-        了这周围熊熊燃烧的火焰，看到了当初少年时，曾经的过往。"-->
-        <!--android:textSize="12sp" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="那眼光在瞬间仿佛穿过了光阴，忘却
+        了这周围熊熊燃烧的火焰，看到了当初少年时，曾经的过往。"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:visibility="gone" />
     </LinearLayout>
 </LinearLayout>

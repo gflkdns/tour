@@ -16,6 +16,15 @@ public class Coach extends BmobObject {
     String introduce;
     String icon;
     List<Comment> comments;
+    List<Favour> favour;
+
+    public List<Favour> getFavour() {
+        return favour;
+    }
+
+    public void setFavour(List<Favour> favour) {
+        this.favour = favour;
+    }
 
     public List<Comment> getComments() {
         return comments;
