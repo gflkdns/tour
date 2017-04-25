@@ -44,7 +44,6 @@ import cn.bmob.v3.listener.UpdateListener;
 /**
  * 教练适配器
  */
-
 public class CoachAdapter extends BaseAdapter {
     private Context context;
     private LayoutInflater mLayoutInflater;

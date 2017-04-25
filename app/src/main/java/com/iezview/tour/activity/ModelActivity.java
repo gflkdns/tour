@@ -23,29 +23,29 @@ public class ModelActivity extends AbActivity {
 
     @Event(
             value = {
-                    R.id.jingdian,
-                    R.id.guiji,
-                    R.id.shangchuan,
-                    R.id.xianlu,
-                    R.id.pinglun,
+//                    R.id.jingdian,
+//                    R.id.guiji,
+//                    R.id.shangchuan,
+//                    R.id.xianlu,
+//                    R.id.pinglun,
             },
             type = View.OnClickListener.class
     )
     private void OnClickX(View view) {
-        switch (view.getId()) {
-            case R.id.jingdian:
-                activity_model.setBackgroundResource(R.drawable.test1);
-                break;
-            case R.id.guiji:
-                activity_model.setBackgroundResource(R.drawable.test3);
-                break;
-            case R.id.shangchuan:
-                break;
-            case R.id.xianlu:
-                activity_model.setBackgroundResource(R.drawable.test2);
-                break;
-            case R.id.pinglun:
-                break;
-        }
+//        switch (view.getId()) {
+//            case R.id.jingdian:
+//                activity_model.setBackgroundResource(R.drawable.test1);
+//                break;
+//            case R.id.guiji:
+//                activity_model.setBackgroundResource(R.drawable.test3);
+//                break;
+//            case R.id.shangchuan:
+//                break;
+//            case R.id.xianlu:
+//                activity_model.setBackgroundResource(R.drawable.test2);
+//                break;
+//            case R.id.pinglun:
+//                break;
+//        }
     }
 }

@@ -47,6 +47,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //详细界面
                 Context context = view.getContext();
                 Intent intent = new Intent(context, ModelActivity.class);
                 context.startActivity(intent);
