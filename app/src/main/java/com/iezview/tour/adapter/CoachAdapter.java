@@ -104,9 +104,9 @@ public class CoachAdapter extends BaseAdapter {
                 viewHoulder.ll_comments.addView(view);
             }
         }
-        if(coach.getFavour() != null && coach.getFavour().size() > 0){
-            viewHoulder.tv_likelist.setText(coach.getFavour().toString()+"觉得很赞！");
-        }else{
+        if (coach.getFavour() != null && coach.getFavour().size() > 0) {
+            viewHoulder.tv_likelist.setText(coach.getFavour().toString() + "觉得很赞！");
+        } else {
             viewHoulder.tv_likelist.setText("");
         }
         return convertView;
