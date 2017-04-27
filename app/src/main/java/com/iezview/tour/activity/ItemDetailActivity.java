@@ -50,6 +50,7 @@ public class ItemDetailActivity extends AppCompatActivity {
                 //详细界面
                 Context context = view.getContext();
                 Intent intent = new Intent(context, ModelActivity.class);
+                intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, getIntent().getStringExtra(ItemDetailFragment.ARG_ITEM_ID));
                 context.startActivity(intent);
             }
         });
