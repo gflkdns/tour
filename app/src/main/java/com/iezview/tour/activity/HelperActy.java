@@ -3,6 +3,7 @@ package com.iezview.tour.activity;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.Toast;
 
@@ -25,5 +26,8 @@ public class HelperActy extends AbActivity {
         super.onCreate(savedInstanceState);
         //  wv_helper.loadUrl("http://jingyan.baidu.com/article/ff411625b8921312e4823721.html");
         wv_helper.loadUrl("file:///android_asset/html/tips.htm");
+    }
+    public void back(View view){
+        finish();
     }
 }
