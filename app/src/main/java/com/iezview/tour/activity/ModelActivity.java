@@ -2,6 +2,7 @@ package com.iezview.tour.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 import com.iezview.tour.activity.dummy.DummyContent;
 import com.iezview.tour.entity.Comment;
 import com.iezview.tour.entity.Favour;
+import com.iezview.tour.entity.SignpUp;
 import com.tour.ydt.R;
 
 import org.xutils.view.annotation.ContentView;
@@ -40,6 +42,8 @@ public class ModelActivity extends AbActivity {
     LinearLayout ll_content;
     @ViewInject(R.id.bt_like)
     Button bt_like;
+    @ViewInject(R.id.bt_baoming)
+    Button bt_baoming;
     /**
      * 驾校的id
      */
@@ -86,6 +90,7 @@ public class ModelActivity extends AbActivity {
             value = {
                     R.id.bt_commit,
                     R.id.bt_like,
+                    R.id.bt_baoming,
             },
             type = View.OnClickListener.class
     )
@@ -93,6 +98,48 @@ public class ModelActivity extends AbActivity {
         switch (view.getId()) {
             case R.id.bt_commit:
                 comment();
+                break;
+            case R.id.bt_baoming:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                View dview = getLayoutInflater().inflate(R.layout.item_baoming, null);
+                final EditText et_name = (EditText) dview.findViewById(R.id.et_name);
+                final EditText et_exc = (EditText) dview.findViewById(R.id.et_exc);
+                final EditText et_phone = (EditText) dview.findViewById(R.id.et_phone);
+                final EditText et_zhuzhi = (EditText) dview.findViewById(R.id.et_zhuzhi);
+                builder.setView(dview);
+                builder.setPositiveButton("报名", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //得到用户填入的信息
+                        String phone = et_phone.getText().toString().trim();
+                        String name = et_name.getText().toString().trim();
+                        String sex = et_exc.getText().toString().trim();
+                        String zhuzhi = et_zhuzhi.getText().toString().trim();
+                        //将这些信息封装成实体类
+                        SignpUp signpUp = new SignpUp();
+                        signpUp.setName(name);
+                        signpUp.setPhone(phone);
+                        signpUp.setSex(sex);
+                        signpUp.setZhizhi(zhuzhi);
+                        signpUp.save(new SaveListener<String>() {
+                            @Override
+                            public void done(String s, BmobException e) {
+                                if (e == null) {
+                                    Toast.makeText(ModelActivity.this, "报名成功!", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(ModelActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                    }
+                });
+                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.create().show();
                 break;
             case R.id.bt_like:
                 BmobQuery<Favour> query = new BmobQuery<>();
@@ -160,9 +207,10 @@ public class ModelActivity extends AbActivity {
     }
 
     private void addView(String str) {
-        TextView textView = new TextView(getApplicationContext());
+        View view = getLayoutInflater().inflate(R.layout.item_commit, null);
+        TextView textView = (TextView) view.findViewById(R.id.tv_text);
         textView.setTextColor(Color.BLACK);
         textView.setText(str);
-        ll_content.addView(textView);
+        ll_content.addView(view);
     }
 }

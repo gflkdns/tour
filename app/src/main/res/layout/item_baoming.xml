@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<EditText
+    android:id="@+id/et_name"
+    android:hint="姓名"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+<EditText
+    android:id="@+id/et_exc"
+    android:hint="性别"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+<EditText
+    android:hint="电话"
+    android:id="@+id/et_phone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+<EditText
+    android:hint="住址"
+    android:id="@+id/et_zhuzhi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
