@@ -14,37 +14,38 @@
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
-
-        <TextView
-            android:id="@+id/text2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/holo_green_light"
-            android:gravity="center"
-            android:text="找教练"
-            android:textColor="@color/withe"
-            android:textSize="20sp" />
-
         <TextView
             android:id="@+id/text3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorAccent"
+            android:background="#44FF4081"
             android:gravity="center"
             android:text="找学校"
             android:textColor="@color/withe"
+            android:layout_marginRight="2dp"
             android:textSize="20sp" />
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="0dp"  android:layout_marginRight="2dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#4499cc00"
+            android:gravity="center"
+            android:text="找教练"
+            android:textColor="@color/withe"
+            android:textSize="20sp" />
+
+
 
         <TextView
             android:id="@+id/text4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/holo_blue_dark"
+            android:background="#440099cc"
             android:gravity="center"
-            android:text="找陪练"
+            android:text="找陪练"  android:layout_marginRight="2dp"
             android:textColor="@color/withe"
             android:textSize="20sp" />
     </LinearLayout>
@@ -57,7 +58,7 @@
         android:layout_marginTop="96dp"
         android:text="点击查看报考须知"
         android:padding="10dp"
-        android:background="@drawable/bmob_update_button_ok_bg_focused"
+        android:background="#4499cc00"
         android:textAllCaps="false" />
 
 </RelativeLayout>
