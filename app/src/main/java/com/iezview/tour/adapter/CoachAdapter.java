@@ -94,6 +94,7 @@ public class CoachAdapter extends BaseAdapter {
         //加载图片失败的时候显示这个
         bd.setFailureDrawableId(R.mipmap.ic_launcher);
         bd.setFadeIn(true);
+        bd.setRadius(10000);
         x.image().bind(viewHoulder.iv_icon, coach.getIcon(), bd.build());
         viewHoulder.ll_comments.removeAllViews();
         if (coach.getComments() != null && coach.getComments().size() > 0) {

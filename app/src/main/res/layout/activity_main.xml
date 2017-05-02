@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:background="#44FF4081"
             android:gravity="center"
-            android:text="找学校"
+            android:text="找驾校"
             android:textColor="@color/withe"
             android:layout_marginRight="2dp"
             android:textSize="20sp" />

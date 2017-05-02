@@ -24,7 +24,7 @@ public class TourApp extends Application {
         x.Ext.init(this);
         // 初始化  SDK
         Bmob.initialize(this, "c1c33cab990cdba551b1fdd60aa66e59");
-        //  initData();
+        //initData();
     }
 
     /**
@@ -42,6 +42,7 @@ public class TourApp extends Application {
                     "，通过理论与实践相结合的教学方式把许多驾驶过程中遇到的情况言传身教。相信是您" +
                     "选择教练的最佳选择。");
             coach.setSex("男");
+            coach.setIcon("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=784423187,1398086279&fm=23&gp=0.jpg");
             coach.setId(String.valueOf(i));
             coach.save(new SaveListener<String>() {
                 @Override
