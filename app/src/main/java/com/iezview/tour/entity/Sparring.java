@@ -1,5 +1,7 @@
 package com.iezview.tour.entity;
 
+import java.util.List;
+
 import cn.bmob.v3.BmobObject;
 
 /**
@@ -13,6 +15,25 @@ public class Sparring extends BmobObject {
     private String age;
     private String desc;
     private String image;
+    private List<Comment> comments;
+
+    public List<Favour> getFavours() {
+        return favours;
+    }
+
+    public void setFavours(List<Favour> favours) {
+        this.favours = favours;
+    }
+
+    private List<Favour> favours;
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 
     public String getId() {
         return id;
