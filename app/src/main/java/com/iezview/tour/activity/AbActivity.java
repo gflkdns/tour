@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 
 import org.xutils.x;
@@ -42,10 +43,13 @@ public class AbActivity extends AppCompatActivity {
     /**
      * 获得一个随机的颜色
      *
-     * @return
+     * @return 
      */
     protected int getRandomColor() {
         Random random = new Random();
         return Color.rgb(random.nextInt(255), random.nextInt(255), random.nextInt(255));
+    }
+    public void back(View view){
+        finish();
     }
 }

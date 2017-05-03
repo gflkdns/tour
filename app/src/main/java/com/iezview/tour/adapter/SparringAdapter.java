@@ -164,7 +164,7 @@ public class SparringAdapter extends BaseAdapter {
                     if (TextUtils.isEmpty(BmobUser.getCurrentUser(Student.class).getSparringId()))
                         signUp();
                     else
-                        Toast.makeText(context, "你已经报名过了！", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "你已经选择过陪练了！", Toast.LENGTH_SHORT).show();
 
                     break;
             }
@@ -172,7 +172,7 @@ public class SparringAdapter extends BaseAdapter {
 
         private void signUp() {
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setMessage("确定报名[" + Sparringes.get(index).getName() + "]教练吗？");
+            builder.setMessage("确定选择[" + Sparringes.get(index).getName() + "]陪练吗？");
             builder.setTitle("提示");
             builder.setNegativeButton("取消", null).setPositiveButton("确定", new DialogInterface.OnClickListener() {
                 @Override
@@ -183,7 +183,7 @@ public class SparringAdapter extends BaseAdapter {
                         @Override
                         public void done(BmobException e) {
                             if (e != null) {
-                                Toast.makeText(context, "报名成功！", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "选择成功！", Toast.LENGTH_SHORT).show();
                                 Activity activity = (Activity) context;
                                 activity.finish();
                             } else {
