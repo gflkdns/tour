@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TourDemo</string>
+    <string name="app_name">驾考一点通</string>
     <string name="title_activity_init_go">InitGoActivity</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
