@@ -60,7 +60,7 @@ public class MainActivity extends AbActivity {
                 startActivity(new Intent(this, ItemListActivity.class));
                 break;
             case R.id.text4://找陪练
-
+                startActivity(new Intent(this, SparringActivity.class));
 
                 break;
         }

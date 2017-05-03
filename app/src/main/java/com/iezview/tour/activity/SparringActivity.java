@@ -21,10 +21,11 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 
 @ContentView(R.layout.activity_sparring)
-public class SparringActivity extends AppCompatActivity {
+public class SparringActivity extends AbActivity {
     @ViewInject(R.id.lv_spar)
     ListView lv_spar;
     private SparringAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
