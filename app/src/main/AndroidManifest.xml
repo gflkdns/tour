@@ -25,7 +25,7 @@
         <activity android:name="com.iezview.tour.activity.MainActivity" />
         <activity android:name="com.iezview.tour.activity.OnWayActivity" />
         <activity android:name="com.iezview.tour.activity.CoachListActivity" />
-        <activity android:name="com.iezview.tour.activity.LoginActivity">
+        <activity android:name="com.iezview.tour.activity.WelcomeActy">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,7 +53,8 @@
         <activity android:name="com.iezview.tour.activity.ModelActivity" />
         <activity android:name="com.iezview.tour.activity.HelperActy" />
         <activity android:name="com.iezview.tour.activity.CoachActivity" />
-        <activity android:name="com.iezview.tour.activity.SparringActivity"></activity>
+        <activity android:name="com.iezview.tour.activity.SparringActivity" />
+        <activity android:name="com.iezview.tour.activity.LoginActivity"></activity>
     </application>
 
 </manifest>
