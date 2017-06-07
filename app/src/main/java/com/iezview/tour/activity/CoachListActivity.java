@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.iezview.tour.adapter.CoachAdapter;
 import com.iezview.tour.entity.Coach;
@@ -25,6 +27,8 @@ import cn.bmob.v3.listener.FindListener;
 public class CoachListActivity extends AbActivity {
     @ViewInject(R.id.lv_Coach)
     ListView lv_Coach;
+    @ViewInject(R.id.imageView)
+    ImageView imageView;
     private CoachAdapter adapter;
 
     @Override
@@ -45,5 +49,16 @@ public class CoachListActivity extends AbActivity {
                 }
             }
         });
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setVisibility(View.GONE);
+                Toast.makeText(CoachListActivity.this, "分享功能敬请期待！", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public ImageView getImageView() {
+        return imageView;
     }
 }

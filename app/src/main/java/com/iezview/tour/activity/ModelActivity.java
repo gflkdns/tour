@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -52,6 +53,8 @@ public class ModelActivity extends AbActivity {
      * 点赞的数量
      */
     private int count;
+    @ViewInject(R.id.imageView)
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +87,13 @@ public class ModelActivity extends AbActivity {
                 }
             }
         });
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setVisibility(View.GONE);
+                Toast.makeText(ModelActivity.this, "分享功能敬请期待！", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Event(
@@ -91,6 +101,7 @@ public class ModelActivity extends AbActivity {
                     R.id.bt_commit,
                     R.id.bt_like,
                     R.id.bt_baoming,
+                    R.id.bt_share,
             },
             type = View.OnClickListener.class
     )
@@ -98,6 +109,9 @@ public class ModelActivity extends AbActivity {
         switch (view.getId()) {
             case R.id.bt_commit:
                 comment();
+                break;
+            case R.id.bt_share:
+                imageView.setVisibility(View.VISIBLE);
                 break;
             case R.id.bt_baoming:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);

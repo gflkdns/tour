@@ -2,6 +2,7 @@ package com.iezview.tour.adapter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -90,6 +91,7 @@ public class CoachAdapter extends BaseAdapter {
         viewHoulder.tv_like.setOnClickListener(new InnerListener(position));
         viewHoulder.tv_comment.setOnClickListener(new InnerListener(position));
         viewHoulder.tv_signup.setOnClickListener(new InnerListener(position));
+        viewHoulder.tv_share.setOnClickListener(new InnerListener(position));
         ImageOptions.Builder bd = new ImageOptions.Builder();
         //加载图片失败的时候显示这个
         bd.setFailureDrawableId(R.mipmap.ic_launcher);
@@ -119,6 +121,8 @@ public class CoachAdapter extends BaseAdapter {
         ImageView iv_icon;
         @ViewInject(R.id.tv_desc)
         TextView tv_desc;
+        @ViewInject(R.id.tv_share)
+        TextView tv_share;
         @ViewInject(R.id.tv_sex)
         TextView tv_sex;
         @ViewInject(R.id.tv_name)
@@ -166,6 +170,10 @@ public class CoachAdapter extends BaseAdapter {
                     break;
                 case R.id.tv_comment:
                     comment();
+                    break;
+                case R.id.tv_share:
+                    CoachListActivity activity = (CoachListActivity) context;
+                    activity.getImageView().setVisibility(View.VISIBLE);
                     break;
                 case R.id.tv_signup:
                     if (TextUtils.isEmpty(BmobUser.getCurrentUser(Student.class).getCoachId()))
